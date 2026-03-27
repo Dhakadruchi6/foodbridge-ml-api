@@ -6,15 +6,3 @@ cmds = ["python3.11 -m pip install --upgrade pip", "python3.11 -m pip install -r
 
 [start]
 cmd = "python3.11 -m uvicorn main:app --host 0.0.0.0 --port $PORT"
-```
-
-Also open `requirements.txt` and **replace the entire content** with this (removed strict version pins that cause conflicts):
-```
-fastapi
-uvicorn
-scikit-learn==1.4.2
-imbalanced-learn
-joblib
-numpy
-pandas
-pydantic
